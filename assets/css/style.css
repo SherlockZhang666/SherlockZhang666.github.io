@@ -31,6 +31,14 @@ body {
   background-color: #ffffff;
 }
 
+/* triangle-mesh background canvas — full-viewport, behind all content */
+#particles-js {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+}
+/* content rides above the canvas so text stays selectable and links clickable */
+.wrap { position: relative; z-index: 1; }
+
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 52px 28px 40px; }
 
 /* links: indigo with an animated underline */
@@ -137,7 +145,7 @@ p { margin: 0 0 12px; }
 .pub__thumb {
   width: 132px; height: 90px; border: 1px solid var(--line); border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, #eef9f6, #d9f5ef);
+  background: #fff;
   color: var(--muted); font-size: .78rem; letter-spacing: .06em;
   overflow: hidden; transition: transform .2s ease, border-color .2s ease;
 }

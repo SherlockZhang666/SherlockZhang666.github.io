@@ -7,12 +7,15 @@
        EDIT: page title shown in the browser tab / search results
        ============================================================ -->
   <title>Hangxing Zhang</title>
-  <meta name="description" content="Personal homepage of Your Name, researcher in Embodied AI, robotics, tactile sensing, and 3D vision." />
-  <meta name="author" content="Your Name" />
+  <meta name="description" content="Personal homepage of Hangxing Zhang, researcher in Embodied AI, robotics, tactile sensing, and 3D vision." />
+  <meta name="author" content="Hangxing Zhang" />
 
-  <meta property="og:title" content="Your Name" />
+  <meta property="og:title" content="Hangxing Zhang" />
   <meta property="og:description" content="Researcher in Embodied AI, robotics, tactile sensing, and 3D vision." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sherlockzhang666.github.io/" />
+  <meta property="og:image" content="https://sherlockzhang666.github.io/assets/img/profile.jpg" />
+  <meta name="twitter:card" content="summary" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,6 +24,8 @@
   <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🧭&lt;/text&gt;&lt;/svg&gt;" />
 </head>
 <body>
+  <!-- animated triangle-mesh background; sits behind everything -->
+  <div id="particles-js"></div>
   <main class="wrap">
 
     <!-- ============================ HEADER / INTRO ============================ -->
@@ -32,12 +37,14 @@
         <p class="affil">Undergraduate &middot; ShanghaiTech University</p>
         <!-- EDIT: short bio. 3–5 sentences, research-focused. -->
         <p>
-          I am a researcher interested in <span class="hl">Embodied AI</span>, <span class="hl">robotics</span>,
+          I am a researcher interested in <span class="hl">embodied AI</span>, <span class="hl">robotics</span>,
           <span class="hl">tactile sensing</span>, and <span class="hl">3D vision</span>. My work explores how robots can
           perceive and interact with the physical world through rich multimodal perception.
         </p>
         <p>
-          I am currently a research assistant at MIT CSAIL, advised by [Advisor].
+          I am currently a research intern at MIT CSAIL.
+          I was also a visiting undergraduate student at Harvard University
+          during the 2025&ndash;26 academic year.
           I am applying for PhD programs starting Fall 2027.
         </p>
         <!-- EDIT: links. Delete any you don't use. -->
@@ -51,7 +58,7 @@
       </div>
       <div class="intro__photo">
         <!-- EDIT: replace assets/img/profile.jpg with your own photo (square works best) -->
-        <img src="assets/img/profile.jpg" alt="Portrait of Your Name"
+        <img src="assets/img/profile.jpg" alt="Portrait of Hangxing Zhang"
              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22%3E%3Crect width=%22220%22 height=%22220%22 fill=%22%23eeeeee%22/%3E%3Ctext x=%2250%25%22 y=%2252%25%22 font-family=%22sans-serif%22 font-size=%2215%22 fill=%22%23999999%22 text-anchor=%22middle%22%3Eyour photo%3C/text%3E%3C/svg%3E';" />
       </div>
     </header>
@@ -61,9 +68,9 @@
       <h2>News</h2>
       <!-- EDIT: keep recent items, newest first. Delete the section if empty. -->
       <ul class="news">
-        <li><span class="date">Jun 2026</span> Launched my personal homepage.</li>
-        <li><span class="date">May 2026</span> Paper submitted to <i>[Venue]</i>.</li>
-        <li><span class="date">Mar 2026</span> Started a project on tactile-guided manipulation.</li>
+        <li><span class="date">Jul 2026</span> <span><b>NeuralActuator</b> wins the <b>Outstanding Systems Paper Award in Memory of Seth Teller</b> of RSS 2026! 🎉</span></li>
+        <li><span class="date">Jun 2026</span> <span><b>SHEC3R</b> is accepted to <b>RSS 2026 Workshop</b> Closing the Sim2Real Gap: Progress and Challenges!</span></li>
+        <li><span class="date">Apr 2026</span> <span><b>NeuralActuator</b> is accepted to <b>RSS 2026</b>!</span></li>
       </ul>
     </section>
 
@@ -91,40 +98,43 @@
 
       <!-- EDIT: duplicate a .pub row per paper, newest first. Delete the demo ones. -->
       <div class="pub">
-        <div class="pub__thumb"><span>fig</span></div>
+        <div class="pub__thumb">
+          <img src="assets/img/fig_shec3r.png" alt="SHEC3R teaser">
+        </div>
         <div class="pub__body">
           <span class="pub__title">SHEC3R: Robot-Grounded Visual Geometry for Stationary Hand-Eye Calibration</span>
           <span class="pub__authors"><b>H. Zhang</b>, Z. Dou, Y. Ma, P. Ye, Z. Cao, Y. R. Song, W. Ye, Y. Tao, Y. Liu, C. Gan, W. Matusik. </span>
           <span class="pub__venue"><i>Closing the Sim2Real Gap: Progress and Challenges Workshop</i>, RSS 2026</span>
           <span class="pub__links">
-            <a href="#">PDF</a> / <a href="#">arXiv</a>
+            <a href="https://drive.google.com/file/d/15LAXy0jo08xfEfGeVCQRF8j6NSSNH99K/view">PDF</a> / <a href="https://sites.google.com/view/rss2026sim2realws/home/accepted-contributions?authuser=0">Workshop Page</a>
           </span>
         </div>
       </div>
 
       <div class="pub">
         <div class="pub__thumb">
-          <!-- Optional: <img src="assets/img/paper1.png" alt=""> -->
-          <span>fig</span>
+          <img src="assets/img/fig_na.png" alt="NeuralActuator teaser">
         </div>
         <div class="pub__body">
           <span class="pub__title">NeuralActuator: Neural Actuation Modeling for Robot Dynamics and External Force Perception</span>
           <span class="pub__authors">Z. Dou, J. U. Onyemelukwe<sup>*</sup>, <b>H. Zhang</b><sup>*</sup>, H. Zhang, M. Guo, Y. Tian, M. P. Lipiec, J. Jacob, C. Liu, P. Y. Chen, Y. Ivanov, W. Matusik</span>
           <span class="pub__venue"><i>Robotics: Science and Systems (RSS)</i>, 2026</span>
           <span class="pub__links">
-            <a href="#">PDF</a> / <a href="#">arXiv</a> / <a href="#">Code</a> / <a href="#">Project</a>
+            <a href="https://frank-zy-dou.github.io/projects/NeuralActuator/index.html">Project Page</a> / <a href="https://arxiv.org/abs/2607.11734">arXiv</a> / <a href="https://github.com/Frank-ZY-Dou/Dynamics-Modeling/tree/main/NeuralActuator">Code</a>
           </span>
         </div>
       </div>
 
       <div class="pub">
-        <div class="pub__thumb"><span>fig</span></div>
+        <div class="pub__thumb">
+          <img src="assets/img/fig_DiffAfford.png" alt="Diffusion affordance teaser">
+        </div>
         <div class="pub__body">
           <span class="pub__title">Diffusion Models are Open-World Affordance Learners: Leveraging Generative Priors for 3D Affordance Learning</span>
           <span class="pub__authors">H. Wang<sup>*</sup>, Z. Zhang<sup>*</sup>, K. Ji<sup>*</sup>, M. Liu, W. Yin, Y. Chen, Z. Liu, X. Zeng, T. Gui, <b>H. Zhang</b>, J. Yuan, Z. Cui, J. Liu, Z. Ma, H. Xiong</span>
           <span class="pub__venue"><i>European Conference on Computer Vision (ECCV)</i>, 2026</span>
           <span class="pub__links">
-            <a href="#">PDF</a> / <a href="#">arXiv</a>
+            <a href="https://zhangzhh.cn/DAG_page/">Project Page</a> / <a href="https://arxiv.org/abs/2508.01651">arXiv</a> / <a href="https://github.com/hq-King/DAG">Code</a>
           </span>
         </div>
       </div>
@@ -132,21 +142,29 @@
 
     <!-- =============================== CV =============================== -->
     <section class="block">
-      <h2>Education &amp; Experience</h2>
+      <h2>Education &amp; Experience &amp; Awards</h2>
       <!-- EDIT each row: years on the left, detail on the right -->
       <div class="cv">
-        <div class="cv__when">2023 &ndash; 2027</div>
-        <div class="cv__what"><b>B.Eng. in Computer Science</b>, ShanghaiTech University</div>
+        <div class="cv__when">2023.09 &ndash; 2027.06</div>
+        <div class="cv__what">B.Eng. in Computer Science, ShanghaiTech University</div>
       </div>
       <div class="cv">
-        <div class="cv__when">2025 &ndash; Now</div>
-        <div class="cv__what"><b>Research Assistant</b>, [Lab / Advisor], [Institution]</div>
+        <div class="cv__when">2025.11 &ndash; Present</div>
+        <div class="cv__what">Research Intern, MIT CSAIL</div>
       </div>
       <div class="cv">
-        <div class="cv__when">2025</div>
-        <div class="cv__what">[Award / Scholarship]</div>
+        <div class="cv__when">2026.06</div>
+        <div class="cv__what">ShanghaiTech University "3+1" International Exchange Scholarship</div>
       </div>
-      <p class="cvlink"><a href="assets/cv.pdf">Download full CV (PDF)</a></p>
+      <div class="cv">
+        <div class="cv__when">2025.12</div>
+        <div class="cv__what">Merit Student of ShanghaiTech University (top 5%)</div>
+      </div>
+      <div class="cv">
+        <div class="cv__when">2024.12</div>
+        <div class="cv__what">Merit Student of ShanghaiTech University (top 5%)</div>
+      </div>
+      <!-- <p class="cvlink"><a href="assets/cv.pdf">Download full CV (PDF)</a></p> -->
     </section>
 
     <!-- ============================= CONTACT ============================= -->
@@ -160,10 +178,12 @@
     </section>
 
     <footer class="foot">
-      <p>&copy; <span id="year">2026</span> Your Name &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
+      <p>&copy; <span id="year">2026</span> Hangxing Zhang &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
     </footer>
 
   </main>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/particles.min.js"></script>
+  <script src="assets/js/particles-init.js"></script>
 </body>
 </html>
