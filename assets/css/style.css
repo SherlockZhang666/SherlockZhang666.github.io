@@ -156,6 +156,7 @@ p { margin: 0 0 12px; }
 .pub__authors { color: var(--ink-soft); }
 .pub__authors b { color: var(--accent-ink); }
 .pub__venue { color: var(--ink-soft); }
+.pub__award { color: #c0392b; font-weight: 700; }
 .pub__links { color: var(--muted); font-weight: 700; font-size: .9rem; margin-top: 3px; }
 
 /* cv */
