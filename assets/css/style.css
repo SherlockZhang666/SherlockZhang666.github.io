@@ -54,33 +54,51 @@ a:hover { color: var(--accent-2); background-size: 0 1px; }
 b, strong { font-weight: 700; }
 /* highlighted research keywords */
 .hl { font-weight: 700; color: var(--accent-ink); }
+/* attention-grabbing note (e.g. PhD application status) */
+.callout { font-weight: 700; color: #1e3a8a; }
 p { margin: 0 0 12px; }
 
 /* ------------------------------- intro ------------------------------- */
 .intro {
   display: grid;
   grid-template-columns: 1fr 188px;
-  gap: 38px;
-  align-items: center;
-  padding-bottom: 26px;
-  border-bottom: 2px solid var(--line-strong);
+  column-gap: 38px;
+  align-items: start;
+  padding-bottom: 30px;
+  position: relative;
+}
+/* soft teal divider that fades out, instead of a hard dark rule */
+.intro::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 18%, rgba(20,184,166,.25) 55%, transparent 100%);
 }
 .intro__text p { color: var(--ink-soft); }
+/* name + first paragraph sit beside the photo; the rest spans the full width */
+.intro__head p:last-child { margin-bottom: 0; }
+.intro__more { grid-column: 1 / -1; margin-top: 14px; }
+.intro__text .plain { margin-bottom: 12px; }
+.intro__text .callout { color: #1e3a8a; }
 .name {
-  font-weight: 900; font-size: 2.15rem; line-height: 1.05; margin: 0 0 4px;
+  font-weight: 900; font-size: 2.15rem; line-height: 1.05; margin: 0 0 16px;
   letter-spacing: -.015em;
   background: linear-gradient(100deg, var(--ink) 30%, var(--accent) 130%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: var(--ink);
 }
-.affil { color: var(--accent-ink); font-weight: 700; margin: 0 0 14px; font-size: .95rem;
-  text-transform: uppercase; letter-spacing: .06em; }
 .links {
   margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line);
-  font-weight: 700; color: var(--muted); font-size: .92rem;
+  display: flex; gap: 18px; align-items: center;
 }
-.links a { white-space: nowrap; }
+.links a {
+  display: inline-flex; color: var(--ink-soft);
+  background: none; padding: 0;
+  transition: color .2s ease, transform .2s ease;
+}
+.links a:hover { color: var(--accent); transform: translateY(-2px); }
+.links svg { width: 22px; height: 22px; fill: currentColor; }
 .intro__photo img {
+  display: block; margin-top: 6px; /* top edge lines up with the name's cap height */
   width: 188px; height: 188px; object-fit: cover;
   border-radius: 8px; border: 1px solid var(--line);
   box-shadow: 0 10px 30px rgba(13,148,136,.14);
@@ -167,6 +185,37 @@ p { margin: 0 0 12px; }
 .cv:last-of-type { border-bottom: none; }
 .cv__when { color: var(--accent-ink); font-weight: 700; font-size: .88rem; }
 .cv__what { color: var(--ink-soft); }
+
+/* education: card text layout without a logo column */
+.edu { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.edu:last-of-type { border-bottom: none; }
+.edu p { margin: 0; color: var(--ink-soft); }
+
+/* internships: logo card per company */
+.exp {
+  display: grid; grid-template-columns: 132px 1fr; gap: 22px;
+  align-items: center; padding: 12px; margin: 0 -12px 6px;
+  border-radius: 10px; border: 1px solid transparent;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.exp:hover {
+  background: rgba(255,255,255,.7);
+  border-color: var(--line);
+  box-shadow: 0 8px 24px rgba(13,148,136,.10);
+}
+.exp__logo {
+  width: 132px; height: 90px; padding: 14px;
+  border: 1px solid var(--line); border-radius: 6px; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+.exp__logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.exp__name { font-weight: 700; font-size: 1rem; margin: 0; }
+.exp__name a { color: var(--ink); }
+.exp__meta { display: flex; justify-content: space-between; gap: 12px;
+  color: var(--muted); font-size: .85rem; font-weight: 700; margin-bottom: 4px; }
+.exp__body p { margin: 0 0 2px; color: var(--ink-soft); }
+/* placeholder that keeps alignment when a card repeats the previous logo */
+.exp__logo--empty { border-color: transparent; background: transparent; }
 .cvlink { margin-top: 14px; font-weight: 700; }
 
 /* footer */
@@ -176,12 +225,16 @@ p { margin: 0 0 12px; }
 /* ------------------------------ responsive --------------------------- */
 @media (max-width: 640px) {
   .wrap { padding: 34px 18px; }
-  .intro { grid-template-columns: 1fr; gap: 18px; text-align: left; }
+  .intro { grid-template-columns: 1fr; row-gap: 18px; text-align: left; }
+  .intro__more { margin-top: 0; }
   .intro__photo { order: -1; }
   .intro__photo img { width: 132px; height: 132px; }
   .name { font-size: 1.85rem; }
   .pub { grid-template-columns: 1fr; gap: 8px; }
   .pub__thumb { width: 100%; height: 150px; }
   .cv { grid-template-columns: 1fr; gap: 2px; }
+  .exp { grid-template-columns: 1fr; gap: 8px; }
+  .exp__meta { flex-direction: column; gap: 0; }
+  .exp__logo--empty { display: none; }
   .news li { flex-wrap: wrap; gap: 6px; }
 }

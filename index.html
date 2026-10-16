@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261016j" />
   <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🧭&lt;/text&gt;&lt;/svg&gt;" />
 
   <!-- ============================================================
@@ -38,7 +38,7 @@
     "alternateName": "张行行",
     "url": "https://sherlockzhang666.github.io/",
     "image": "https://sherlockzhang666.github.io/assets/img/profile.jpg",
-    "email": "mailto:sherlock.114515@gmail.com",
+    "email": "mailto:hxzhang0609@gmail.com",
     "jobTitle": "Research Intern",
     "description": "Researcher in Embodied AI, robotics, tactile sensing, and 3D vision.",
     "affiliation": [
@@ -46,6 +46,11 @@
         "@type": "Organization",
         "name": "MIT CSAIL",
         "url": "https://www.csail.mit.edu/"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Harvard University",
+        "url": "https://www.harvard.edu/"
       },
       {
         "@type": "CollegeOrUniversity",
@@ -80,36 +85,59 @@
 
     <!-- ============================ HEADER / INTRO ============================ -->
     <header class="intro">
-      <div class="intro__text">
+      <div class="intro__text intro__head">
         <!-- EDIT: your name -->
         <h1 class="name">Hangxing Zhang</h1>
-        <!-- EDIT: affiliation / one-line identity -->
-        <p class="affil">Undergraduate &middot; ShanghaiTech University</p>
-        <!-- EDIT: short bio. 3–5 sentences, research-focused. -->
+        <!-- EDIT: short bio. Who you are, where you work, then research interests. -->
         <p>
-          I am a researcher interested in <span class="hl">embodied AI</span>, <span class="hl">robotics</span>,
-          <span class="hl">tactile sensing</span>, and <span class="hl">3D vision</span>. My work explores how robots can
-          perceive and interact with the physical world through rich multimodal perception.
-        </p>
-        <p>
-          I am currently a research intern at MIT CSAIL.
-          I was also a visiting undergraduate student at Harvard University
-          during the 2025&ndash;26 academic year.
-          I am applying for PhD programs starting Fall 2027.
-        </p>
-        <!-- EDIT: links. Delete any you don't use. -->
-        <p class="links">
-          <a href="mailto:sherlock.114515@gmail.com">Email</a> /
-          <!-- <a href="assets/cv.pdf">CV</a> / -->
-          <a href="https://scholar.google.com/citations?user=uK_24SMAAAAJ&hl=en-US" target="_blank" rel="noopener">Google&nbsp;Scholar</a> /
-          <a href="https://github.com/SherlockZhang666" target="_blank" rel="noopener">GitHub</a> /
-          <a href="https://www.linkedin.com/in/%E8%A1%8C%E8%A1%8C-%E5%BC%A0-672957301/?locale=en-US" target="_blank" rel="noopener">LinkedIn</a>
+          I am a senior undergraduate student in Computer Science at
+          <a href="https://www.shanghaitech.edu.cn/eng/" target="_blank" rel="noopener">ShanghaiTech University</a>.
+          I am currently a research intern at
+          <a href="https://cdfg.mit.edu/" target="_blank" rel="noopener">MIT CSAIL</a> with
+          <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener">Prof. Wojciech Matusik</a>,
+          and at Harvard SEAS with
+          <a href="https://hankyang.seas.harvard.edu/" target="_blank" rel="noopener">Prof. Heng Yang</a> and
+          <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Prof. Yilun Du</a>.
+          During the 2025&ndash;26 academic year, I was a visiting undergraduate student at Harvard University
+          and a cross-registered student at MIT.
         </p>
       </div>
       <div class="intro__photo">
         <!-- EDIT: replace assets/img/profile.jpg with your own photo (square works best) -->
         <img src="assets/img/profile.jpg" alt="Portrait of Hangxing Zhang"
              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22%3E%3Crect width=%22220%22 height=%22220%22 fill=%22%23eeeeee%22/%3E%3Ctext x=%2250%25%22 y=%2252%25%22 font-family=%22sans-serif%22 font-size=%2215%22 fill=%22%23999999%22 text-anchor=%22middle%22%3Eyour photo%3C/text%3E%3C/svg%3E';" />
+      </div>
+      <!-- full-width part of the intro, below the photo -->
+      <div class="intro__text intro__more">
+        <p>
+          My goal is to build robots that perceive and act in the physical world as skillfully as humans do,
+          by tightly coupling touch, vision, and learning. My current interests include:
+        </p>
+        <!-- EDIT each research interest -->
+        <ul class="plain">
+          <li><span class="hl">Dexterous manipulation</span> &mdash; contact-rich, multi-fingered manipulation with real robot hands.</li>
+          <li><span class="hl">Tactile sensing</span> &mdash; using high-resolution touch to perceive contact and guide action.</li>
+          <li><span class="hl">3D vision for robotics</span> &mdash; geometry-grounded perception, from calibration to scene understanding.</li>
+          <li><span class="hl">Robot learning</span> &mdash; scalable policies learned from human and robot demonstrations.</li>
+        </ul>
+        <p class="callout">I am applying for PhD programs starting Fall 2027.</p>
+        <!-- EDIT: links. Delete any you don't use. -->
+        <p class="links">
+          <!-- icon links; each icon is an inline SVG so no icon font is needed -->
+          <a href="mailto:hxzhang0609@gmail.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <!-- <a href="assets/cv.pdf" aria-label="CV" title="CV">CV</a> -->
+          <a href="https://scholar.google.com/citations?user=uK_24SMAAAAJ&hl=en-US" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+          </a>
+          <a href="https://github.com/SherlockZhang666" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/%E8%A1%8C%E8%A1%8C-%E5%BC%A0-672957301/?locale=en-US" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </p>
       </div>
     </header>
 
@@ -118,26 +146,10 @@
       <h2>News</h2>
       <!-- EDIT: keep recent items, newest first. Delete the section if empty. -->
       <ul class="news">
+        <li><span class="date">Sep 2026</span> <span>Received the <b>China National Scholarship</b>!</span></li>
         <li><span class="date">Jul 2026</span> <span><b>NeuralActuator</b> wins the <b>Outstanding Systems Paper Award in Memory of Seth Teller</b> of RSS 2026! 🎉</span></li>
         <li><span class="date">Jun 2026</span> <span><b>SHEC3R</b> is accepted to <b>RSS 2026 Workshop</b> Closing the Sim2Real Gap: Progress and Challenges!</span></li>
         <li><span class="date">Apr 2026</span> <span><b>NeuralActuator</b> is accepted to <b>RSS 2026</b>!</span></li>
-      </ul>
-    </section>
-
-    <!-- ============================ RESEARCH ============================ -->
-    <section class="block">
-      <h2>Research</h2>
-      <!-- EDIT: a short paragraph framing your research vision -->
-      <p>
-        My goal is to build robots that understand and act in the physical world through
-        embodied, multimodal perception &mdash; combining touch, geometry, and learning.
-        My current interests are:
-      </p>
-      <ul class="plain">
-        <!-- EDIT each item -->
-        <li><b>Tactile sensing &amp; manipulation</b> &mdash; learning dexterous, contact-rich manipulation from high-resolution touch.</li>
-        <li><b>3D vision &amp; scene understanding</b> &mdash; reconstructing and reasoning about 3D scenes for robotic interaction.</li>
-        <li><b>Embodied AI</b> &mdash; agents that perceive, plan, and learn through embodied interaction.</li>
       </ul>
     </section>
 
@@ -152,11 +164,12 @@
           <img src="assets/img/fig_shec3r.png" alt="SHEC3R teaser">
         </div>
         <div class="pub__body">
-          <span class="pub__title">SHEC3R: Robot-Grounded Visual Geometry for Stationary Hand-Eye Calibration</span>
-          <span class="pub__authors"><b>H. Zhang</b>, Z. Dou, Y. Ma, P. Ye, Z. Cao, Y. R. Song, W. Ye, Y. Tao, Y. Liu, C. Gan, W. Matusik. </span>
+          <span class="pub__title">SHEC3R: A Robot-Grounded Neural Initializer for Stationary Eye-to-Hand Calibration</span>
+          <span class="pub__authors"><b>H. Zhang</b>, Z. Dou, Y. Ma, P. Ye, P. Li, Y. Guo, M. Yan, J. Li, Y. Tao, Y. Liu, C. Gan, Y. Jiang, J. Li, Y. Ivanov, W. Matusik</span>
+          <span class="pub__venue">Under review at <i>IEEE International Conference on Robotics &amp; Automation (ICRA)</i>, 2027</span>
           <span class="pub__venue"><i>Closing the Sim2Real Gap: Progress and Challenges Workshop</i>, RSS 2026</span>
           <span class="pub__links">
-            <a href="https://drive.google.com/file/d/15LAXy0jo08xfEfGeVCQRF8j6NSSNH99K/view">PDF</a> / <a href="https://sites.google.com/view/rss2026sim2realws/home/accepted-contributions?authuser=0">Workshop Page</a>
+            <a href="https://sherlockzhang666.github.io/SHEC3R-project-page/">Project Page</a> / <a href="https://drive.google.com/file/d/15LAXy0jo08xfEfGeVCQRF8j6NSSNH99K/view">Workshop PDF</a> / <a href="https://sites.google.com/view/rss2026sim2realws/home/accepted-contributions?authuser=0">Workshop Page</a>
           </span>
         </div>
       </div>
@@ -189,31 +202,150 @@
           </span>
         </div>
       </div>
+
+      <div class="pub">
+        <div class="pub__thumb">
+          <img src="assets/img/fig_r3d.png" alt="R3D teaser">
+        </div>
+        <div class="pub__body">
+          <span class="pub__title">R3D: Revisiting 3D Policy Learning</span>
+          <span class="pub__authors">Z. Hong<sup>*</sup>, S. Wu<sup>*</sup>, H. Cui<sup>*</sup>, B. Zhao, R. Ji, Y. He, <b>H. Zhang</b>, Z. Ke, J. Wang, G. Zhang, J. Gu</span>
+          <span class="pub__venue">Under review at <i>IEEE Robotics and Automation Letters (RA-L)</i></span>
+          <span class="pub__links">
+            <a href="https://r3d-policy.github.io/">Project Page</a> / <a href="https://arxiv.org/abs/2604.15281">arXiv</a> / <a href="https://github.com/Wushr-Lance/R3D-Policy">Code</a>
+          </span>
+        </div>
+      </div>
     </section>
 
-    <!-- =============================== CV =============================== -->
+    <!-- ============================ EDUCATION ============================ -->
     <section class="block">
-      <h2>Education &amp; Experience &amp; Awards</h2>
-      <!-- EDIT each row: years on the left, detail on the right -->
+      <h2>Education</h2>
+      <!-- EDIT: one .edu entry per school; same text layout as the cards below, without logos -->
+      <div class="edu">
+        <h3 class="exp__name">ShanghaiTech University</h3>
+        <div class="exp__meta"><span>Shanghai, China</span><span>2023.09 &ndash; 2027.06 (Expected)</span></div>
+        <p><b>B.Eng. in Computer Science and Technology</b> &middot; AI Honors Program</p>
+      </div>
+      <div class="edu">
+        <h3 class="exp__name">Harvard University</h3>
+        <div class="exp__meta"><span>Cambridge, MA, USA</span><span>2025.09 &ndash; 2026.08</span></div>
+        <p><b>Visiting Undergraduate Student</b></p>
+      </div>
+      <div class="edu">
+        <h3 class="exp__name">Massachusetts Institute of Technology</h3>
+        <div class="exp__meta"><span>Cambridge, MA, USA</span><span>2025.09 &ndash; 2026.05</span></div>
+        <p><b>Cross-registered Student</b></p>
+      </div>
+    </section>
+
+    <!-- ======================= RESEARCH EXPERIENCE ======================= -->
+    <section class="block">
+      <h2>Research Experience</h2>
+      <!-- EDIT: one .exp card per lab, newest first. Logos live in assets/img/logos/. -->
+      <div class="exp">
+        <div class="exp__logo">
+          <img src="assets/img/logos/harvard_seas.svg" alt="Harvard SEAS logo">
+        </div>
+        <div class="exp__body">
+          <h3 class="exp__name">Harvard SEAS</h3>
+          <div class="exp__meta"><span>Cambridge, MA, USA</span><span>2026.07 &ndash; Present</span></div>
+          <p><b>Research Intern</b> at the Computational Robotics Group &amp; Embodied Minds Lab</p>
+          <p>Advisors: <a href="https://hankyang.seas.harvard.edu/" target="_blank" rel="noopener">Prof. Heng Yang</a> and <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Prof. Yilun Du</a></p>
+        </div>
+      </div>
+      <div class="exp">
+        <div class="exp__logo">
+          <img src="assets/img/logos/mit_csail.svg" alt="MIT CSAIL logo">
+        </div>
+        <div class="exp__body">
+          <h3 class="exp__name">MIT CSAIL</h3>
+          <div class="exp__meta"><span>Cambridge, MA, USA</span><span>2025.11 &ndash; Present</span></div>
+          <p><b>Research Intern</b> at the <a href="https://cdfg.mit.edu/" target="_blank" rel="noopener">Computational Design &amp; Fabrication Group</a></p>
+          <p>Advisor: <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener">Prof. Wojciech Matusik</a></p>
+        </div>
+      </div>
+      <div class="exp">
+        <div class="exp__logo">
+          <img src="assets/img/logos/shanghaitech.svg" alt="ShanghaiTech University logo">
+        </div>
+        <div class="exp__body">
+          <h3 class="exp__name">ShanghaiTech University</h3>
+          <div class="exp__meta"><span>Shanghai, China</span><span>2025.01 &ndash; 2025.08</span></div>
+          <p><b>Research Intern</b> at the Scaled Embodied AI (SEA) Lab</p>
+          <p>Advisor: <a href="https://jiayuan-gu.github.io/" target="_blank" rel="noopener">Prof. Jiayuan Gu</a></p>
+        </div>
+      </div>
+      <div class="exp">
+        <!-- same school as the card above, so no repeated logo -->
+        <div class="exp__logo exp__logo--empty"></div>
+        <div class="exp__body">
+          <h3 class="exp__name">ShanghaiTech University</h3>
+          <div class="exp__meta"><span>Shanghai, China</span><span>2024.06 &ndash; 2024.12</span></div>
+          <p><b>Research Intern</b> at the Trustworthy and General Intelligence (YesAI) Lab</p>
+          <p>Advisor: <a href="https://faculty.sist.shanghaitech.edu.cn/faculty/shiye/" target="_blank" rel="noopener">Prof. Ye Shi</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== INTERNSHIPS =========================== -->
+    <section class="block">
+      <h2>Internships</h2>
+      <!-- EDIT: one .exp card per company, newest first. Logos live in assets/img/logos/. -->
+      <div class="exp">
+        <div class="exp__logo">
+          <img src="assets/img/logos/instadapt.png" alt="InstAdapt logo">
+        </div>
+        <div class="exp__body">
+          <h3 class="exp__name"><a href="https://instadapt.com/" target="_blank" rel="noopener">InstAdapt</a></h3>
+          <div class="exp__meta"><span>Shanghai, China</span><span>2026.10 &ndash; Present</span></div>
+          <p><b>Research Intern</b></p>
+          <p>Egocentric visuo-tactile data acquisition infrastructure</p>
+        </div>
+      </div>
+      <div class="exp">
+        <div class="exp__logo">
+          <img src="assets/img/logos/stealth.svg" alt="Stealth startup placeholder logo">
+        </div>
+        <div class="exp__body">
+          <h3 class="exp__name">Stealth Robotics Startup</h3>
+          <div class="exp__meta"><span>Cambridge, MA, USA</span><span>2026.07 &ndash; 2026.09</span></div>
+          <p><b>Research Intern</b></p>
+          <p>VLA deployment on the SharpaWave tactile dexterous hand</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== HONORS & AWARDS ========================== -->
+    <section class="block">
+      <h2>Honors &amp; Awards</h2>
       <div class="cv">
-        <div class="cv__when">2023.09 &ndash; 2027.06</div>
-        <div class="cv__what">B.Eng. in Computer Science, ShanghaiTech University</div>
+        <div class="cv__when">2026.09</div>
+        <div class="cv__what">China National Scholarship (highest undergraduate honor in China)</div>
       </div>
       <div class="cv">
-        <div class="cv__when">2025.11 &ndash; Present</div>
-        <div class="cv__what">Research Intern, MIT CSAIL</div>
+        <div class="cv__when">2026.07</div>
+        <div class="cv__what">Outstanding Systems Paper Award in Memory of Seth Teller, RSS 2026</div>
       </div>
       <div class="cv">
         <div class="cv__when">2026.06</div>
         <div class="cv__what">ShanghaiTech University "3+1" International Exchange Scholarship</div>
       </div>
       <div class="cv">
-        <div class="cv__when">2025.12</div>
+        <div class="cv__when">2024.12, 2025.12</div>
         <div class="cv__what">Merit Student of ShanghaiTech University (top 5%)</div>
       </div>
       <div class="cv">
+        <div class="cv__when">2025.04</div>
+        <div class="cv__what">Meritorious Winner, Mathematical Contest in Modeling (MCM)</div>
+      </div>
+      <div class="cv">
         <div class="cv__when">2024.12</div>
-        <div class="cv__what">Merit Student of ShanghaiTech University (top 5%)</div>
+        <div class="cv__what">Second Prize, National Mathematics Competition for College Students (Shanghai District)</div>
+      </div>
+      <div class="cv">
+        <div class="cv__when">2024.04</div>
+        <div class="cv__what">Second Prize, National English Competition for College Students (Shanghai District)</div>
       </div>
       <!-- <p class="cvlink"><a href="assets/cv.pdf">Download full CV (PDF)</a></p> -->
     </section>
@@ -224,7 +356,7 @@
       <!-- EDIT -->
       <p>
         I'm happy to connect about research and PhD opportunities. The best way to reach me is by email:
-        <a href="mailto:sherlock.114515@gmail.com">sherlock.114515@gmail.com</a>.
+        <a href="mailto:hxzhang0609@gmail.com">hxzhang0609@gmail.com</a>.
       </p>
     </section>
 
