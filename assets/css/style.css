@@ -86,6 +86,11 @@ p { margin: 0 0 12px; }
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: var(--ink);
 }
+.name .pronouns {
+  font-weight: 400; font-size: 1rem; letter-spacing: 0;
+  background: none; -webkit-text-fill-color: var(--ink-soft); color: var(--ink-soft);
+  margin-left: 4px; white-space: nowrap;
+}
 .links {
   margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line);
   display: flex; gap: 18px; align-items: center;
